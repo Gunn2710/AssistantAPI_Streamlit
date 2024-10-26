@@ -1,12 +1,10 @@
 import openai
 import streamlit as st
 import pandas as pd
-import os
 
-# Set up OpenAI API key (make sure to securely store your API key in production)
-openai.api_key = 'sk-insert Your OpenAI API Key'  # replace with your OpenAI API key or use an environment variable
+# Set up OpenAI API key (hardcoded for local testing)
+openai.api_key = "your-API-key"  # Replace "your-openai-api-key" with the actual API key
 
-# Initialize session state for storing player data
 # Initialize session state for storing player data
 if "players" not in st.session_state:
     st.session_state["players"] = []
@@ -87,6 +85,3 @@ if st.session_state["players"]:
 else:
     st.info("Add players to see the list and create pairs.")
 
-'''
-
-'''
